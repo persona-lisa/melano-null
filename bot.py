@@ -4,6 +4,7 @@ import json
 import datetime
 import asyncio
 import os
+from dotenv import load_dotenv
 from core import log_action, notify_owner, is_mass_caps, is_mass_mentions, is_sus_channel_creation
 
 intents = discord.Intents.default()
@@ -11,7 +12,10 @@ intents.members = True
 intents.messages = True
 intents.guilds = True
 client = commands.Bot(command_prefix="!", intents=intents)
+# Загрузить переменные окружения из .env
+load_dotenv()
 
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 # Логирование действий
 def log_action(message):
     print(f"[{datetime.datetime.now()}] {message}")
@@ -119,4 +123,4 @@ async def on_ready():
                 print(f"CONSOLE ➤ Бот подключился к {channel.name}")
 
 # Запуск бота
-client.run("MTM2MDU1ODg1MjAzODQ2MzU5OA.G_aRj2.grTqULJwS_SRNZPH_KzHeU3NF2zaZdGNoa8vf4")
+client.run(DISCORD_TOKEN)
