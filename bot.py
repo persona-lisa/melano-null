@@ -119,4 +119,4 @@ async def on_ready():
                 print(f"CONSOLE ➤ Бот подключился к {channel.name}")
 
 # Запуск бота
-client.run("MTM2MDU1ODg1MjAzODQ2MzU5OA.GA48Jp._dWSyEmq41W5B-8ANZ9K1JdJfqdA5L7sGOYohI")
+client.run("MTM2MDU1ODg1MjAzODQ2MzU5OA.G_aRj2.grTqULJwS_SRNZPH_KzHeU3NF2zaZdGNoa8vf4")
